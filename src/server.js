@@ -7,6 +7,8 @@ const port = process.env.PORT || 3333
 const dbUrl = process.env.MONGO_URL
 
 const app = express()
+app.use(express.json())
+
 mongoose.connect(dbUrl, {
 	useNewUrlParser: true,
 	useUnifiedTopology: true

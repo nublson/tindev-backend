@@ -1,7 +1,6 @@
 const routes = require('express').Router()
+const DevController = require('./Controllers/DevController')
 
-routes.get('/', (req, res) => {
-	res.send('Hello World!')
-})
+routes.post('/', DevController.store)
 
 module.exports = routes
